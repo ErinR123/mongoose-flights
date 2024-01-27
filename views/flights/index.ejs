@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<ul>
+  <% flights.forEach((flight) => { %>
+  <a href="/flights/<%=flight._id%>">Details</a>
+  <li>
+    Airline: <%= flight.airline %><br />
+    Airport: <%= flight.airport %><br />
+    Flight No: <%= flight.flightNo %><br />
+    Departs: <%= flight.departs.toLocaleString() %>
+  </li>
+  <% }); %>
+</ul>

@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<form action="/flights" method="POST">
+  <label for="airport">Airport</label>
+  <select name="airport" id="airport">
+    <% airports.forEach(airport => { %>
+    <option><%= airport %></option>
+    <% }) %>
+  </select>
+  <label for="airline">Airline</label>
+  <select name="airline" id="airline">
+    <% airlines.forEach(airline => { %>
+    <option><%= airline %></option>
+    <% }) %>
+  </select>
+  <label for="flightNo">Flight Number</label>
+  <input name="flightNo" type="number">
+  <label for="departs">Departures</label>
+  <input type="date" name="departs">
+  <button>ADD FLIGHT</button>
+</form>
